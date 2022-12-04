@@ -4,6 +4,13 @@ const prompt = require('prompt-sync')();
 
 class AddressBookService {
     contactInfoList = new Array();
+
+    /**
+     * Purpose : To insert new contact in the address book 
+     * 
+     * @param {*} contactInfoList 
+     * @returns 
+     */
     insert(contactInfoList) {
         try {
             let contactInfo = new ContactDetails();
@@ -25,6 +32,13 @@ class AddressBookService {
     }
 
 
+    /**
+     * Purpose : To edit contact details by giving the first name of contact
+     * 
+     * @param {*} contactInfoList 
+     * @param {*} fname 
+     * @returns 
+     */
     editContact(contactInfoList, fname) {
         contactInfoList.forEach(element => {
             if ((element.fName === fname) == true) {
@@ -75,6 +89,25 @@ class AddressBookService {
         });
         return contactInfoList;
     }
+
+
+    /**
+     * Purpose : To delete contact details by giving their first name 
+     * 
+     * @param {*} contactInfoList 
+     * @param {*} fname 
+     * @returns 
+     */
+    deleteContact(contactInfoList, fname) {
+        contactInfoList.forEach(value => {
+            if ((value.fName === fname) == true) {
+                let index = contactInfoList.indexOf(fname);
+                contactInfoList.splice(index, 1);
+            }
+        });
+        return contactInfoList;
+    }
+
 }
 
 module.exports = AddressBookService;
