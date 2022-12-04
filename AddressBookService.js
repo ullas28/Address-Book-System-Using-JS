@@ -125,6 +125,44 @@ class AddressBookService {
         return contactInfoList;
     }
 
+
+    /**
+     * Purpose : TO search person through city or state name
+     * 
+     * @param {*} contactInfoList 
+     */
+    searchContact(contactInfoList) {
+        console.log("Press 1 to search by City");
+        console.log("Press 2 to search by State");
+        let userChoice = parseInt(prompt("Enter your choice : "));
+
+        switch (userChoice) {
+            case 1:
+                let city = prompt("Enter the City Name : ");
+                contactInfoList.forEach(value => {
+                    if ((value.city === city) == true) {
+                        console.log(value);
+                    }
+                    else
+                    console.log("City name doesn't exists")
+                });
+                break;
+            case 2:
+                let state = prompt("Enter the State Name : ");
+                contactInfoList.forEach(value => {
+                    if ((value.state === state) == true) {
+                        console.log(value);
+                    }
+                    else
+                    console.log("state name doesn't exists")
+                });
+                break;
+            default:
+                console.log("You have entered invalid input!");
+                break;
+        }
+    }
+
 }
 
 module.exports = AddressBookService;
