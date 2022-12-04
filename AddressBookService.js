@@ -12,6 +12,7 @@ class AddressBookService {
      * @returns 
      */
     insert(contactInfoList) {
+        let found = false;
         try {
             let contactInfo = new ContactDetails();
             contactInfo.fName = prompt("Enter First Name : ");
@@ -23,7 +24,23 @@ class AddressBookService {
             contactInfo.phoneNo = prompt("Enter Phone Number : ");
             contactInfo.emailID = prompt("Enter Email : ");
 
-            contactInfoList.push(contactInfo);
+            if (contactInfoList.length < 0) {
+                contactInfoList.push(contactInfo);
+            } else if (contactInfoList.length >= 0) {
+                contactInfoList.forEach(element => {
+                    if ((element.fName === contactInfo.fName) == true) {
+                        found = true;
+                        return;
+                    }
+                });
+                if (found == true) {
+                    console.log();
+                    console.log("Duplicate entry exists!");
+                    console.log();
+                } else {
+                    contactInfoList.push(contactInfo);
+                }
+            }
 
             return contactInfoList;
         } catch (e) {
