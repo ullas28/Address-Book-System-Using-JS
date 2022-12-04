@@ -141,7 +141,6 @@ class ContactDetails {
             ", state = " + this.state + ", zip = " + this.zip + ", phoneNumber = " + this.phoneNumber + ", email = " + this.email;
     }
 
-
 }
 
 // exporting class file to another file
