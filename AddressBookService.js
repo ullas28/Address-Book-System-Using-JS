@@ -125,7 +125,6 @@ class AddressBookService {
         return contactInfoList;
     }
 
-
     /**
      * Purpose : TO search person through city or state name
      * 
