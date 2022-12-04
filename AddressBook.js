@@ -27,6 +27,10 @@ while (flag) {
             contactInfoList = addressBookService.deleteContact(contactInfoList,pName);
             break;
         case 5:
+            console.log("Number of contacts in address book are : "+contactInfoList.length);
+            console.log();
+            break;
+        case 6:
             console.log("EXITED !!!");
             flag = false;
             break;
