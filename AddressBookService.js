@@ -163,14 +163,16 @@ class AddressBookService {
         }
     }
 
-     /**
+    /**
      * Purpose : To sort the contact detials alphabetically by Person's Name
      * 
      * @param {*} contactInfoList 
      */
-      sortContact(contactInfoList) {
+     sortContact(contactInfoList) {
         console.log("Press 1 to sort the Address Book by First Name");
-        
+        console.log("Press 2 to sort the Address Book by City");
+        console.log("Press 3 to sort the Address Book by State");
+        console.log("Press 4 to sort the Address Book by Zip");
         let userChoice = parseInt(prompt("Enter your choice : "));
 
         switch (userChoice) {
@@ -183,7 +185,33 @@ class AddressBookService {
                 });
                 console.log(contactInfoList);
                 break;
-            
+            case 2:
+                contactInfoList.sort((a, b) => {
+                    if (a === b) {
+                        return 0;
+                    }
+                    return a.city < b.city ? -1 : 1;
+                });
+                console.log(contactInfoList);
+                break;
+            case 3:
+                contactInfoList.sort((a, b) => {
+                    if (a === b) {
+                        return 0;
+                    }
+                    return a.state < b.state ? -1 : 1;
+                });
+                console.log(contactInfoList);
+                break;
+            case 4:
+                contactInfoList.sort((a, b) => {
+                    if (a === b) {
+                        return 0;
+                    }
+                    return a.zip < b.zip ? -1 : 1;
+                });
+                console.log(contactInfoList);
+                break;
             default:
                 console.log("You have entered invalid input!");
                 break;
