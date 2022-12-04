@@ -134,27 +134,28 @@ class AddressBookService {
         console.log("Press 1 to search by City");
         console.log("Press 2 to search by State");
         let userChoice = parseInt(prompt("Enter your choice : "));
-
+        let count = 0;
         switch (userChoice) {
             case 1:
                 let city = prompt("Enter the City Name : ");
                 contactInfoList.forEach(value => {
                     if ((value.city === city) == true) {
                         console.log(value);
-                    }
-                    else
-                    console.log("City name doesn't exists")
+                        count++;
+                        }                
                 });
+                console.log("Number of contact persons in " + city + " is "+count);
+               
                 break;
             case 2:
                 let state = prompt("Enter the State Name : ");
                 contactInfoList.forEach(value => {
                     if ((value.state === state) == true) {
                         console.log(value);
+                        count++;
                     }
-                    else
-                    console.log("state name doesn't exists")
                 });
+                console.log("Number of contact persons in " + state + " is "+count);
                 break;
             default:
                 console.log("You have entered invalid input!");
