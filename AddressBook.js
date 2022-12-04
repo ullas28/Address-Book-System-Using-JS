@@ -6,7 +6,6 @@ var contactInfo = new ContactDetails("Virat","Kohli","Vijayanagar","Sagar","Madh
 
 console.log(contactInfo.toString());
 
-
 contactInfo.firstName = "Rohith";
 contactInfo.lastName = "Sharma";
 contactInfo.address = "MG road";

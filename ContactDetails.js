@@ -27,9 +27,7 @@ class ContactDetails {
     get firstName() {
         return this.firstName;
     }
-    /**
-     * @param {any} firstName
-     */
+   
     set firstName(firstName) {
         this.firstName = firstName;
     }
@@ -37,9 +35,7 @@ class ContactDetails {
     get lastName() {
         return this.lastName;
     }
-    /**
-     * @param {any} lastName
-     */
+    
     set lastName(lastName) {
         this.lastName = lastName;
     }
@@ -47,9 +43,7 @@ class ContactDetails {
     get address() {
         return this.address;
     }
-    /**
-     * @param {any} address
-     */
+   
     set address(address) {
         this.address = address;
     }
@@ -57,9 +51,7 @@ class ContactDetails {
     get city() {
         return this.city;
     }
-    /**
-     * @param {any} city
-     */
+   
     set city(city) {
         this.city = city;
     }
@@ -67,9 +59,7 @@ class ContactDetails {
     get state() {
         return this.state;
     }
-    /**
-     * @param {any} state
-     */
+   
     set state(state) {
         this.state = state;
     }
@@ -77,9 +67,7 @@ class ContactDetails {
     get zip() {
         return this.zip;
     }
-    /**
-     * @param {any} zip
-     */
+    
     set zip(zip) {
         this.zip = zip;
     }
@@ -87,9 +75,7 @@ class ContactDetails {
     get phoneNumber() {
         return this.phoneNumber;
     }
-    /**
-     * @param {any} value
-     */
+   
     set phoneNumber(phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
@@ -97,9 +83,7 @@ class ContactDetails {
     get email() {
         return this.email;
     }
-    /**
-     * @param {any} email
-     */
+    
     set email(email) {
         this.email = email;
     }
